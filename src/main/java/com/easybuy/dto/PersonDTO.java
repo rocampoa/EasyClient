@@ -1,4 +1,4 @@
-package com.easyclient.dtos;
+package com.easybuy.dto;
 
 import com.easyclient.entities.PersonEntity;
 import lombok.Data;

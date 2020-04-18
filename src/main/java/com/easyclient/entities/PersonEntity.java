@@ -1,6 +1,6 @@
 package com.easyclient.entities;
 
-import com.easyclient.dtos.PersonDTO;
+import com.easybuy.dto.PersonDTO;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -150,32 +150,30 @@ public class PersonEntity {
     return Objects.hash(personId, documentType, nroId, username, passsword, name, lastName, email, phone, address);
   }
 
+
+
   public PersonEntity() {
+  }
+
+  private void AssignValues(PersonDTO data) {
+    this.documentType = data.getDocumentType();
+    this.nroId = data.getNroId();
+    this.username = data.getUsername();
+    this.passsword = data.getPasssword();
+    this.name = data.getName();
+    this.lastName = data.getLastName();
+    this.email = data.getEmail();
+    this.phone = data.getPhone();
+    this.address = data.getAddress();
   }
 
   public PersonEntity(PersonDTO data) {
     this.personId = data.getPersonId();
-    this.documentType = data.getDocumentType();
-    this.nroId = data.getNroId();
-    this.username = data.getUsername();
-    this.passsword = data.getPasssword();
-    this.name = data.getName();
-    this.lastName = data.getLastName();
-    this.email = data.getEmail();
-    this.phone = data.getPhone();
-    this.address = data.getAddress();
+    AssignValues(data);
   }
 
   public void updateEntity(PersonDTO data) {
-    this.documentType = data.getDocumentType();
-    this.nroId = data.getNroId();
-    this.username = data.getUsername();
-    this.passsword = data.getPasssword();
-    this.name = data.getName();
-    this.lastName = data.getLastName();
-    this.email = data.getEmail();
-    this.phone = data.getPhone();
-    this.address = data.getAddress();
+    AssignValues(data);
   }
 }
 

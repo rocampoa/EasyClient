@@ -1,6 +1,6 @@
 package com.easyclient.services;
 
-import com.easyclient.dtos.PersonDTO;
+import com.easybuy.dto.PersonDTO;
 import com.easyclient.entities.PersonEntity;
 import com.easyclient.repositories.PersonRepostitory;
 import org.springframework.beans.factory.annotation.Autowired;

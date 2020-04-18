@@ -1,4 +1,4 @@
-package com.easyclient.dtos;
+package com.easybuy.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

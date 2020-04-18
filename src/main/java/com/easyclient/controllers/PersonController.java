@@ -1,7 +1,7 @@
 package com.easyclient.controllers;
 
-import com.easyclient.dtos.MessageDTO;
-import com.easyclient.dtos.PersonDTO;
+import com.easybuy.dto.MessageDTO;
+import com.easybuy.dto.PersonDTO;
 import com.easyclient.services.PersonSevice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
